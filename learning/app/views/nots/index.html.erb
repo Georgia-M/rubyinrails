@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Nots</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Course</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nots.each do |not| %>
+      <tr>
+          <td><%= link_to note.course.name, course_path(note.course) %></td>
+        <td><%= not.title %></td>
+        <td><%= not.content %></td>
+        <td><%= not.course %></td>
+        <td><%= link_to 'Show', not %></td>
+        <td><%= link_to 'Edit', edit_not_path(not) %></td>
+        <td><%= link_to 'Destroy', not, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Not', new_not_path %>

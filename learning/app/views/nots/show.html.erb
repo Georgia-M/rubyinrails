@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @not.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @not.content %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @not.course %>
+</p>
+
+<p>
+    <strong>Course:</strong>
+    <%=link_to @note.course.name, course_path(@note.course) %>
+</p>
+
+<%= link_to 'Edit', edit_not_path(@not) %> |
+<%= link_to 'Back', nots_path %>

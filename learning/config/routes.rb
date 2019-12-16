@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :nots
   resources :courses
   
   root to: 'courses#index' 

@@ -29,5 +29,9 @@
   <div class="actions">
     <%= form.submit %>
   </div>
-  <div class
+  
+  <div class="field">
+      <%= form.label :color %>
+      <%= form.text_field :color, type: 'color' %>
+  </div>
 <% end %>

@@ -1,0 +1,2 @@
+module NotsHelper
+end
